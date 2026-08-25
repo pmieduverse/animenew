@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @font-face {
+      font-family: "Cormorant Garamond";
+      src: url("fonts/cormorant.woff2") format("woff2");
+      font-weight: 600 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Figtree";
+      src: url("fonts/figtree.woff2") format("woff2");
+      font-weight: 500 600;
+      font-style: normal;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #08070b;
+    }
+    .stage {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      background:
+        radial-gradient(ellipse 70% 55% at 50% 108%, rgba(196, 92, 74, 0.28), transparent 62%),
+        radial-gradient(ellipse 50% 40% at 50% 0%, rgba(232, 228, 220, 0.08), transparent 58%),
+        radial-gradient(ellipse 40% 50% at 18% 50%, rgba(28, 26, 34, 0.9), transparent 70%),
+        radial-gradient(ellipse 40% 50% at 82% 50%, rgba(28, 26, 34, 0.9), transparent 70%),
+        #08070b;
+      color: #e8e4dc;
+    }
+    .vignette {
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 180px 48px #08070b;
+      pointer-events: none;
+    }
+    .grain {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.16;
+      mix-blend-mode: overlay;
+      pointer-events: none;
+    }
+    .art {
+      position: absolute;
+      inset: 0;
+    }
+    .lockup {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -46%);
+      text-align: center;
+      width: 780px;
+    }
+    h1 {
+      font-family: "Cormorant Garamond", "Liberation Serif", serif;
+      font-weight: 700;
+      font-size: 92px;
+      letter-spacing: 0.14em;
+      line-height: 1;
+      color: #e8e4dc;
+      text-shadow:
+        0 0 28px rgba(196, 92, 74, 0.35),
+        0 2px 0 rgba(8, 7, 11, 0.8);
+      font-kerning: none;
+    }
+    .rule {
+      display: block;
+      width: 168px;
+      height: 1px;
+      margin: 22px auto 16px;
+      background: linear-gradient(90deg, transparent, #c45c4a 20%, #e8e4dc 50%, #c45c4a 80%, transparent);
+      opacity: 0.85;
+    }
+    .tag {
+      font-family: "Figtree", "Liberation Sans", sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: #c45c4a;
+    }
+    .corners span {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border-color: rgba(232, 228, 220, 0.18);
+      border-style: solid;
+      border-width: 0;
+    }
+    .corners .tl { top: 28px; left: 28px; border-top-width: 1px; border-left-width: 1px; }
+    .corners .tr { top: 28px; right: 28px; border-top-width: 1px; border-right-width: 1px; }
+    .corners .bl { bottom: 28px; left: 28px; border-bottom-width: 1px; border-left-width: 1px; }
+    .corners .br { bottom: 28px; right: 28px; border-bottom-width: 1px; border-right-width: 1px; }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <svg class="art" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="ember" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#c45c4a" stop-opacity="0.95"/>
+          <stop offset="55%" stop-color="#c45c4a" stop-opacity="0.25"/>
+          <stop offset="100%" stop-color="#c45c4a" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="moon" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#e8e4dc" stop-opacity="0.95"/>
+          <stop offset="50%" stop-color="#e8e4dc" stop-opacity="0.2"/>
+          <stop offset="100%" stop-color="#e8e4dc" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="ashg" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#8a8580" stop-opacity="0.9"/>
+          <stop offset="55%" stop-color="#1c1a22" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#1c1a22" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <!-- concentric wake rings -->
+      <circle cx="600" cy="318" r="168" fill="none" stroke="#c45c4a" stroke-opacity="0.16" stroke-width="1"/>
+      <circle cx="600" cy="318" r="232" fill="none" stroke="#e8e4dc" stroke-opacity="0.08" stroke-width="1"/>
+      <circle cx="600" cy="318" r="300" fill="none" stroke="#c45c4a" stroke-opacity="0.07" stroke-width="1"/>
+      <!-- large hollow triangle sigil -->
+      <path d="M600 128 L786 470 H414 Z" fill="none" stroke="#c45c4a" stroke-opacity="0.38" stroke-width="2"/>
+      <path d="M600 178 L742 448 H458 Z" fill="none" stroke="#08070b" stroke-width="10"/>
+      <path d="M600 178 L742 448 H458 Z" fill="none" stroke="#e8e4dc" stroke-opacity="0.12" stroke-width="1.5"/>
+      <!-- moonlight slit -->
+      <rect x="596" y="220" width="8" height="150" rx="1" fill="#e8e4dc" fill-opacity="0.14"/>
+      <!-- three elemental orbs at vertices -->
+      <circle cx="600" cy="128" r="38" fill="url(#moon)"/>
+      <circle cx="600" cy="128" r="7" fill="#e8e4dc"/>
+      <circle cx="414" cy="470" r="42" fill="url(#ember)"/>
+      <circle cx="414" cy="470" r="7" fill="#c45c4a"/>
+      <circle cx="786" cy="470" r="40" fill="url(#ashg)"/>
+      <circle cx="786" cy="470" r="6" fill="#8a8580"/>
+      <!-- faint connecting arcs -->
+      <path d="M600 128 Q470 250 414 470" fill="none" stroke="#c45c4a" stroke-opacity="0.18" stroke-width="1"/>
+      <path d="M600 128 Q730 250 786 470" fill="none" stroke="#e8e4dc" stroke-opacity="0.12" stroke-width="1"/>
+    </svg>
+    <div class="lockup">
+      <h1>AETHERWAKE</h1>
+      <span class="rule"></span>
+      <div class="tag">Awaken the three</div>
+    </div>
+    <div class="corners">
+      <span class="tl"></span><span class="tr"></span>
+      <span class="bl"></span><span class="br"></span>
+    </div>
+    <svg class="grain" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <filter id="n">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
+        <feColorMatrix type="saturate" values="0"/>
+      </filter>
+      <rect width="100%" height="100%" filter="url(#n)"/>
+    </svg>
+    <div class="vignette"></div>
+  </div>
+</body>
+</html>

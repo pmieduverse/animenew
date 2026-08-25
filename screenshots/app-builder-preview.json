@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "AETHERWAKE",
+      "hasCanvas": true,
+      "bodyTextLen": 119,
+      "bodyTextHash": "9eb813da55e3d74251ebc190ae5bdc4b1315f985588d9ac0620dac1b27adc4ee",
+      "bodyTextPrefix": "DARK FANTASY AWAKENING AETHERWAKE Three powers. One law. A rank ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "AETHERWAKE",
+      "hasCanvas": true,
+      "bodyTextLen": 119,
+      "bodyTextHash": "9eb813da55e3d74251ebc190ae5bdc4b1315f985588d9ac0620dac1b27adc4ee",
+      "bodyTextPrefix": "DARK FANTASY AWAKENING AETHERWAKE Three powers. One law. A rank ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
